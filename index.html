@@ -2,9 +2,964 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Headshot Plan | Team Headshots for Denver Firms</title>
+<meta name="description" content="We photograph your whole Denver team for $0 down, then keep every headshot current: every new hire, every quarter, at your office.">
 <meta name="robots" content="noindex">
-<title>The Headshot Plan — coming soon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7F7F4;      /* cool print-paper white */
+  --ink:#141414;
+  --film:#191919;       /* film strip bands */
+  --edge:#D9A441;       /* amber: frame numbers on the film rebate only */
+  --grease:#C8281E;     /* grease-pencil red: hand-drawn marks only */
+  --gray:#62625E;       /* secondary text */
+  --card:#E9E9E4;
+  --sheet:#FFFFFF;
+  --rule:#CFCFC9;
+  --hatch:#DEDED8;
+  --white:#FFFFFF;
+  --on-film:#F7F7F4;
+  --on-film-dim:#C9C9C3;
+  --chip:#FFF2A8;
+  --chip-line:#B89600;
+  --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --gut:24px;
+  --max:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 18px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.dark :focus-visible{outline-color:var(--paper)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:12px 16px;z-index:2000;border-radius:2px}
+.skip:focus{left:8px}
+.wrap{width:100%;max-width:calc(var(--max) + var(--gut)*2);margin:0 auto;padding:0 var(--gut)}
+.cond{font-weight:800;font-stretch:75%;letter-spacing:-.005em;line-height:.98;text-wrap:balance}
+h2.cond{font-size:clamp(38px,5.2vw,72px)}
+.mono{font-family:var(--mono)}
+.sec{padding:clamp(56px,7.4vw,104px) 0}
+
+/* placeholder chips */
+.ph{display:inline;background:var(--chip);color:var(--ink);border:1px dashed var(--chip-line);border-radius:3px;padding:1px 6px;font:500 14px/1.5 var(--sans);font-stretch:100%;letter-spacing:0;text-transform:none;white-space:normal;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.ph.nw{white-space:nowrap}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;background:var(--ink);color:#fff;border:2px solid var(--ink);border-radius:2px;font:700 18px/1.2 var(--sans);text-decoration:none;cursor:pointer;text-align:center}
+.btn:hover{background:#2e2e2c;border-color:#2e2e2c}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--card);border-color:var(--ink)}
+.btn.sm{min-height:48px;padding:0 20px;font-size:17px}
+.btn.inv{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.inv:hover{background:#fff;border-color:#fff}
+.tel{display:inline-flex;align-items:center;gap:8px;min-height:48px;text-decoration:none;font-weight:600}
+.tel:hover{text-decoration:underline}
+
+/* leader + header */
+.leader .wrap{display:flex;align-items:center;gap:26px;height:52px}
+.leader .mono{font-size:14px;color:var(--gray);letter-spacing:.04em}
+.leader .tel{min-height:44px;font-size:16px}
+.site-header{border-top:1px solid var(--ink);border-bottom:1px solid var(--rule)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:14px;padding-bottom:16px}
+.wm{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.wm-mark{width:38px;height:38px;flex:none}
+.wm-name{display:block;font-weight:800;font-stretch:75%;font-size:30px;line-height:1;letter-spacing:.003em}
+.wm-sub{display:block;margin-top:5px;font:400 14px/1.2 var(--mono);color:var(--gray);letter-spacing:.01em}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{flex:none}
+.nav a:not(.btn){display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:0 2px;color:var(--ink);font-weight:500;text-decoration:none;border-bottom:2px solid transparent}
+.nav a:not(.btn):hover{border-bottom-color:var(--ink)}
+
+/* hero */
+.hero .wrap{padding-top:clamp(22px,3vw,44px)}
+.pre{display:flex;align-items:flex-start;gap:10px;font:500 17px/1.4 var(--mono);letter-spacing:.01em;margin-bottom:clamp(10px,1.3vw,16px)}
+.pre::before{content:"";flex:none;margin-top:.32em;border-left:9px solid var(--ink);border-top:5.5px solid transparent;border-bottom:5.5px solid transparent}
+.hero h1{font-size:clamp(46px,7.6vw,112px);max-width:15em}
+.hero-row{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,4vw,64px);align-items:start;margin-top:clamp(18px,2.2vw,30px)}
+.sub{font-size:clamp(18px,1.55vw,21px);line-height:1.5;max-width:35em}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.trust{list-style:none;display:flex;flex-direction:column;gap:6px;margin-top:18px;font-size:17px;line-height:1.45;color:var(--ink)}
+.trust li{display:flex;align-items:baseline;gap:9px}
+.trust li::before{content:"";flex:none;width:8px;height:8px;background:var(--ink);transform:translateY(-1px)}
+.strip-line{margin-top:clamp(24px,3vw,38px);font:500 17px/1.4 var(--mono);letter-spacing:.01em}
+
+/* film strip */
+.film{background:var(--film);overflow-x:auto;overflow-y:hidden;margin-top:12px;scrollbar-width:thin;scrollbar-color:#5b5b57 var(--film)}
+.film-in{min-width:1100px;padding:8px 28px 10px}
+.spr{display:block;width:calc(100% + 56px);margin:0 -28px;height:16px}
+.frames{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:26px}
+.fr{position:relative}
+.fr .img{position:relative;aspect-ratio:3/2;background:#000}
+.fr .img img{width:100%;height:100%;object-fit:cover}
+.num{display:flex;align-items:center;gap:7px;padding:16px 0 14px;font:500 13px/1 var(--mono);letter-spacing:.08em;color:var(--edge)}
+.num::after{content:"";border-left:7px solid currentColor;border-top:4.5px solid transparent;border-bottom:4.5px solid transparent}
+.circle{position:absolute;left:-8%;top:-13%;width:116%;height:118%;overflow:visible;pointer-events:none}
+.circle path{fill:none;stroke:var(--grease);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1 2;stroke-dashoffset:0}
+@media (prefers-reduced-motion:no-preference){
+  .circle path{animation:draw .9s cubic-bezier(.45,.05,.3,1) .4s both}
+}
+@keyframes draw{from{stroke-dashoffset:1.02}to{stroke-dashoffset:0}}
+.pick{position:absolute;right:2px;bottom:7px;display:flex;align-items:center;gap:7px;font:500 14px/1 var(--mono);color:var(--on-film);letter-spacing:.04em}
+.pick svg{width:30px;height:28px;overflow:visible}
+.check path{fill:none;stroke:var(--grease);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+
+/* proof */
+.proof{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.proof ul{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.proof li{padding:22px 22px;border-left:1px solid var(--rule);display:flex;align-items:center;min-height:84px;line-height:1.35}
+.proof li:first-child{border-left:0;padding-left:0}
+.proof .award{font-weight:800;font-stretch:75%;font-size:26px;line-height:1.05}
+.proof li div{min-width:0}
+
+/* problem */
+.problem .head{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,5vw,80px);align-items:start}
+.pain{list-style:none;display:grid;gap:14px}
+.pain li{position:relative;padding-left:30px}
+.pain li::before{content:"";position:absolute;left:0;top:.62em;width:16px;height:11px;border:2px solid var(--ink)}
+.key{margin-top:clamp(34px,4.6vw,60px);padding-top:clamp(20px,2.8vw,34px);border-top:2px solid var(--ink);font-weight:800;font-stretch:75%;font-size:clamp(30px,3.7vw,54px);line-height:1.06;letter-spacing:-.003em;max-width:25em;color:var(--gray)}
+.key strong{font-weight:800;color:var(--ink)}
+.ba{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(24px,4vw,56px);margin-top:clamp(36px,5vw,64px);align-items:start}
+.cap{font:400 17px/1.4 var(--mono);color:var(--gray);margin-top:12px}
+.avs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.av{position:relative;aspect-ratio:1/1.1;overflow:hidden;background:var(--bg)}
+.av svg{position:absolute;left:calc(50% - var(--w,60%)/2 + var(--x,0%));bottom:var(--y,-3%);width:var(--w,60%);height:auto;fill:var(--fg);transform:rotate(var(--r,0deg));transform-origin:50% 100%}
+.mini-film{background:var(--film);padding:6px 14px}
+.mini-film .spr{width:calc(100% + 28px);margin:0 -14px;height:16px}
+.mini-frames{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:8px 0}
+.crop{aspect-ratio:4/5;background-repeat:no-repeat;background-color:#fff}
+
+/* matching wall (film band) */
+.wall{background:var(--film);color:var(--on-film)}
+.wall > .spr{width:100%;margin:0;height:16px}
+.wall-in{padding-top:clamp(40px,5.6vw,76px);padding-bottom:clamp(40px,5.6vw,76px);display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,2.2fr);gap:clamp(24px,4vw,64px);align-items:start}
+.wall h2{color:var(--on-film);font-size:clamp(38px,4.6vw,64px)}
+.wall-note{font:400 17px/1.4 var(--mono);color:var(--on-film-dim);margin-top:14px}
+.wall-frames{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,2.6vw,34px)}
+.wall-frames figure{min-width:0}
+.tile{position:relative;aspect-ratio:4/5;overflow:hidden;background:#fff}
+.tile img{position:absolute;max-width:none;height:auto;width:var(--w);left:var(--l);top:var(--t)}
+.tile::after{content:"";position:absolute;left:0;right:0;top:31.6%;height:3px;background:var(--grease);opacity:.9}
+.k1{--w:192.5%;--l:-54.1%;--t:-1.26%}
+.k4{--w:262.8%;--l:-89.1%;--t:-53.4%}
+.k6{--w:302.5%;--l:-101.3%;--t:-38.2%}
+.wall figcaption{font:500 18px/1.3 var(--mono);color:var(--on-film);padding-bottom:4px}
+.wall figcaption b{font-weight:500}
+.wall .num{padding:14px 0 10px}
+
+/* how + look file */
+.how-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(32px,5vw,88px);align-items:start;margin-top:clamp(28px,4vw,52px)}
+.steps{list-style:none;counter-reset:step;border-top:2px solid var(--ink)}
+.steps li{counter-increment:step;display:grid;grid-template-columns:clamp(56px,6vw,84px) minmax(0,1fr);gap:8px 12px;padding:24px 0;border-bottom:1px solid var(--rule)}
+.steps li::before{content:counter(step);grid-row:1/3;font-weight:800;font-stretch:75%;font-size:clamp(48px,5.4vw,76px);line-height:.9;color:var(--ink)}
+.steps h3{font-weight:800;font-stretch:75%;font-size:clamp(26px,2.5vw,34px);line-height:1.05}
+.steps h3 .check{display:inline-block;width:34px;height:31px;overflow:visible;vertical-align:-5px;margin-left:10px}
+.steps p{max-width:36em}
+.lookfile{background:var(--card);border:1px solid #BDBDB6;padding:22px 22px 20px;font-family:var(--mono);font-size:17px;line-height:1.5;position:relative}
+.lookfile::before{content:"";position:absolute;top:-1px;left:22px;width:60px;height:10px;background:var(--film)}
+.lf-title{font:500 17px/1.4 var(--mono);padding-top:6px;padding-bottom:12px;border-bottom:1px dashed var(--gray);margin-bottom:6px;letter-spacing:.01em}
+.lookfile dl>div{padding:9px 0;border-bottom:1px dotted #9B9B95}
+.lookfile dl>div:last-child{border-bottom:0}
+.lookfile dt{font-weight:500;display:inline}
+.lookfile dd{display:inline;overflow-wrap:anywhere}
+.lf-cap{font:400 17px/1.5 var(--mono);color:var(--ink);margin-top:14px}
+
+/* plan */
+.plan{border-top:1px solid var(--ink)}
+.plan-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(32px,5vw,80px);align-items:start;margin-top:clamp(28px,4vw,48px)}
+.amount{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+.amount strong{font-weight:800;font-stretch:75%;font-size:clamp(72px,9vw,128px);line-height:.9;letter-spacing:-.01em}
+.amount span.u{font-size:clamp(20px,2vw,26px);font-weight:600}
+.credits{font-size:clamp(19px,1.8vw,22px);margin-top:14px;max-width:30em;font-weight:600;text-wrap:balance}
+.phoneplan{margin-top:10px;font-size:17px;line-height:1.5;color:var(--gray);max-width:34em}
+
+/* calculator */
+.calc{margin-top:26px;background:var(--card);border:1px solid #BDBDB6;border-left:6px solid var(--ink);padding:20px 22px 22px}
+.calc label{display:block;font-weight:700;font-size:19px;line-height:1.3;margin-bottom:10px}
+.calc input{display:block;width:150px;min-height:56px;padding:6px 12px;font:800 32px/1 var(--sans);font-stretch:75%;font-variant-numeric:tabular-nums;color:var(--ink);background:var(--white);border:2px solid var(--ink);border-radius:2px}
+.calc-out{margin-top:16px}
+.calc-out .big{display:block;font-weight:800;font-stretch:75%;font-size:clamp(34px,3.6vw,46px);line-height:1.05;font-variant-numeric:tabular-nums;text-wrap:balance}
+.calc-out .small{display:block;margin-top:6px;font-size:19px;line-height:1.4;font-variant-numeric:tabular-nums}
+.calc-out .small strong{font-weight:700}
+.calc-out .hint{font-size:19px;font-weight:600}
+
+.sub-h{font-weight:800;font-stretch:75%;font-size:30px;line-height:1;margin:36px 0 6px}
+.val-note{font:400 17px/1.4 var(--mono);color:var(--gray);margin-bottom:8px;text-wrap:balance}
+.incl{list-style:none;border-top:2px solid var(--ink)}
+.incl li{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 18px;align-items:start;padding:13px 0 13px 38px;border-bottom:1px solid var(--rule);line-height:1.45}
+.incl li::before{content:"";position:absolute;left:0;top:calc(13px + .2em);width:20px;height:20px;border:2px solid var(--ink);background:var(--sheet)}
+.incl li::after{content:"";position:absolute;left:6px;top:calc(13px + .28em);width:6px;height:11px;border:solid var(--ink);border-width:0 2.5px 2.5px 0;transform:rotate(40deg)}
+.incl b{font-weight:700}
+.incl .v{text-align:right;white-space:nowrap;font-weight:800;font-stretch:75%;font-size:26px;line-height:1.1;font-variant-numeric:tabular-nums}
+.incl .v.inc{font:400 17px/1.8 var(--mono);color:var(--gray)}
+.total{margin-top:24px;background:var(--sheet);border:2px solid var(--ink);padding:18px 22px 20px}
+.total .t1{font-size:clamp(20px,2vw,24px);line-height:1.3;font-weight:600}
+.total .t1 strong{font-weight:800;font-stretch:75%;font-size:1.4em;line-height:1}
+.total .t2{margin-top:10px;padding-top:12px;border-top:1px solid var(--rule);font-size:clamp(19px,1.8vw,22px);line-height:1.35}
+.total .t2 strong{font-weight:800;font-stretch:75%;font-size:clamp(30px,3vw,40px);line-height:1.05;display:inline;white-space:nowrap}
+
+.guars{list-style:none;margin-top:26px;background:var(--sheet);border:1px solid var(--ink);padding:4px 20px}
+.guars li{display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-bottom:1px solid var(--rule)}
+.guars li:last-child{border-bottom:0}
+.guars .mk{flex:none;width:38px;height:34px;display:grid;place-items:center}
+.guars .mk svg{width:38px;height:34px;overflow:visible}
+.guars .mk.sq::before{content:"";width:14px;height:10px;border:2px solid var(--ink)}
+.terms{margin-top:16px;color:var(--ink)}
+
+.founding{position:relative;margin:38px 8px 0;background:var(--sheet);padding:26px 28px 28px}
+.founding .rough{position:absolute;left:-8px;top:-8px;width:calc(100% + 16px);height:calc(100% + 16px);overflow:visible;pointer-events:none}
+.founding .rough path{fill:none;stroke:var(--grease);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.founding h3{font-weight:800;font-stretch:75%;font-size:clamp(36px,3.6vw,48px);line-height:1;margin-bottom:12px}
+.founding p{font-size:19px;line-height:1.5}
+
+.rates{margin-top:40px}
+.rates h3{font-weight:800;font-stretch:75%;font-size:28px;line-height:1.1;display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px}
+.rates table{width:100%;border-collapse:collapse;margin-top:10px;border-top:2px solid var(--ink)}
+.rates th,.rates td{padding:12px 0;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule);font-size:17px;line-height:1.4}
+.rates th{font-weight:600;width:44%;padding-right:12px}
+.rates td{font-variant-numeric:tabular-nums}
+.jump{display:none;margin-top:28px}
+
+.formcard{background:var(--sheet);border:1px solid var(--ink)}
+.formcard .film-top{background:var(--film);padding:6px 14px}
+.formcard .film-top .spr{width:calc(100% + 28px);margin:0 -14px}
+.form-in{padding:clamp(20px,3vw,32px)}
+.form-in h3{font-weight:800;font-stretch:75%;font-size:36px;line-height:1}
+.form-in .lead{margin:10px 0 20px}
+.field{margin:0 0 16px}
+.field label{display:block;font-weight:600;margin-bottom:6px}
+.field label small{font-weight:400;font-size:17px;color:var(--gray)}
+.field input,.field textarea{display:block;width:100%;min-height:48px;padding:10px 12px;font:400 17px/1.4 var(--sans);color:var(--ink);background:var(--white);border:1px solid var(--gray);border-radius:2px}
+.field textarea{min-height:92px;resize:vertical}
+.optin{display:flex;gap:12px;align-items:flex-start;min-height:48px;padding:8px 0;margin:0 0 14px;cursor:pointer;font-weight:600;line-height:1.35}
+.optin input{flex:none;width:26px;height:26px;margin:0;accent-color:var(--ink)}
+.form-in .btn{width:100%;margin-top:6px}
+.thanks{padding:8px 0}
+.thanks p{font-size:21px;line-height:1.4;font-weight:600}
+
+/* free leadership session */
+.ls-band{background:var(--card);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:clamp(40px,5.6vw,76px) 0}
+.ls{background:var(--sheet);border:2px solid var(--ink)}
+.ls .film-top{background:var(--film);padding:6px 14px}
+.ls .film-top .spr{width:calc(100% + 28px);margin:0 -14px}
+.ls-in{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,4vw,64px);align-items:center;padding:clamp(24px,4vw,52px)}
+.ls .kick{font:500 16px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:9px}
+.ls .kick::before{content:"";flex:none;border-left:8px solid var(--ink);border-top:5px solid transparent;border-bottom:5px solid transparent}
+.ls h2{font-size:clamp(36px,4.4vw,62px)}
+.ls p{font-size:20px;line-height:1.5}
+.ls .btn{margin-top:20px}
+
+/* work */
+.work{border-top:1px solid var(--ink)}
+.sheet{background:var(--sheet);border:1px solid var(--rule);padding:clamp(16px,2.6vw,34px);margin-top:clamp(26px,3.6vw,44px)}
+.sheet-meta{display:flex;justify-content:space-between;gap:16px;font:400 15px/1.3 var(--mono);color:var(--gray);letter-spacing:.04em;padding-bottom:16px;margin-bottom:22px;border-bottom:1px solid var(--rule)}
+.cs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 26px}
+.cs{display:flex;flex-direction:column;min-width:0}
+.cs-img{border:3px solid var(--film);background:#000;aspect-ratio:3/2;flex:none}
+.cs-img img{width:100%;height:100%;object-fit:cover}
+.cs figcaption{display:flex;gap:14px;align-items:baseline;padding-top:12px;font:400 17px/1.35 var(--mono);color:var(--gray)}
+.cs .n{color:var(--ink);font-weight:500;position:relative;flex:none;padding:2px 0}
+.cs .n svg{position:absolute;left:-9px;top:-7px;width:calc(100% + 18px);height:calc(100% + 14px);overflow:visible}
+.cs .n svg path{fill:none;stroke:var(--grease);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.cs.tall{grid-column:2;grid-row:1/3}
+.cs.tall .cs-img{aspect-ratio:auto;flex:1 1 auto;min-height:0}
+.cs.a{grid-column:1;grid-row:1}
+.cs.b{grid-column:1;grid-row:2}
+.cs.c{grid-column:3;grid-row:1}
+.cs.d{grid-column:3;grid-row:2}
+.cs.wide{grid-column:1/4;grid-row:3}
+.cs.wide .cs-img{aspect-ratio:2.6/1}
+.cs.wide img{object-position:50% 58%}
+
+/* photographers */
+.ph-intro{margin-top:clamp(18px,2.4vw,30px);font-weight:800;font-stretch:75%;font-size:clamp(28px,3.4vw,48px);line-height:1.08;max-width:27em;text-wrap:pretty}
+.people{margin-top:clamp(28px,4vw,52px);border-top:2px solid var(--ink)}
+.person{display:grid;grid-template-columns:var(--fw) minmax(0,1fr);gap:clamp(20px,4vw,56px);padding:clamp(24px,3.4vw,40px) 0;border-bottom:1px solid var(--rule);align-items:start}
+.person.ian{--fw:clamp(200px,24vw,320px)}
+.person.rich{--fw:clamp(160px,17vw,230px)}
+.phframe{aspect-ratio:4/5;border:3px solid var(--film);background:repeating-linear-gradient(135deg,var(--card) 0 11px,var(--hatch) 11px 22px);display:grid;place-items:center;text-align:center;padding:12px}
+.person h3{font-weight:800;font-stretch:75%;font-size:clamp(34px,3.6vw,48px);line-height:1;display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px}
+.person p.rest{max-width:38em;margin-top:14px}
+
+/* reviews */
+.reviews{border-top:1px solid var(--ink)}
+.reviews .intro{margin-top:14px;color:var(--gray)}
+.notes{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:36px 28px;margin-top:clamp(34px,4.4vw,56px);align-items:start}
+.note{position:relative;padding:26px 26px 22px;quotes:none}
+.note blockquote{margin:0}
+.note p.q{line-height:1.45}
+.note .src{display:block;margin-top:14px;font:400 17px/1.4 var(--mono)}
+.note::before{content:"";position:absolute;top:-11px;width:74px;height:22px;background:rgba(98,98,94,.3)}
+.n1{grid-column:1/6;background:var(--sheet);border:1px solid var(--rule);transform:rotate(-1.4deg)}
+.n1::before{left:30px;transform:rotate(-4deg)}
+.n1 p.q{font-size:22px}
+.n1 .src{color:var(--gray)}
+.n2{grid-column:6/13;background:var(--card);transform:rotate(.7deg);margin-top:30px;padding:30px 32px 26px}
+.n2::before{right:44px;transform:rotate(3deg)}
+.n2 p.q{font-size:19px}
+.n2 .src{color:var(--gray)}
+.n3{grid-column:1/8;background:var(--sheet);border:1px solid var(--rule);border-left:5px solid var(--ink);transform:rotate(-.5deg);padding:26px 30px 24px}
+.n3::before{left:50%;transform:translateX(-50%) rotate(-2deg)}
+.n3 p.q{font-size:19px}
+.n3 .src{color:var(--gray)}
+.n4{grid-column:8/13;background:var(--film);color:var(--on-film);transform:rotate(1.3deg);margin-top:40px;padding:30px 28px 26px}
+.n4::before{display:none}
+.n4 p.q{font-weight:800;font-stretch:75%;font-size:clamp(32px,3.4vw,46px);line-height:1.02}
+.n4 .src{color:var(--on-film-dim)}
+.n5{grid-column:4/11;border:2px dashed var(--gray);padding:22px 26px;transform:rotate(-.4deg);text-align:center}
+.n5::before{display:none}
+
+/* faq */
+.faq{border-top:1px solid var(--ink)}
+.faq-list{margin-top:clamp(26px,3.6vw,44px);max-width:900px;border-top:2px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:64px;padding:12px 0;font-weight:700;font-size:20px;line-height:1.3}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:18px;height:18px;background:linear-gradient(var(--ink),var(--ink)) center/100% 2.5px no-repeat,linear-gradient(var(--ink),var(--ink)) center/2.5px 100% no-repeat}
+.faq details[open] summary::after{background:linear-gradient(var(--ink),var(--ink)) center/100% 2.5px no-repeat}
+.faq details p{padding:0 40px 22px 0;max-width:42em}
+
+/* final cta */
+.cta{background:var(--film);color:var(--on-film)}
+.cta .spr{width:100%;margin:0;height:16px}
+.cta-in{padding-top:clamp(44px,6vw,84px);padding-bottom:clamp(44px,6vw,84px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px 48px}
+.cta h2{font-size:clamp(40px,5.4vw,78px);max-width:11em;color:var(--on-film)}
+.cta-act{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.cta .tel{color:var(--on-film)}
+
+/* footer */
+.foot{padding:34px 0 40px;font-size:17px}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center}
+.foot .sep{color:var(--gray)}
+
+/* mobile bar */
+.bar{display:none}
+
+@media (min-width:900px) and (min-height:860px){
+  .formcol{position:sticky;top:16px}
+}
+@media (max-width:999px){
+  .site-header .wrap{flex-direction:column;align-items:flex-start;gap:8px;padding-bottom:6px}
+  .nav{width:100%;overflow-x:auto;gap:22px;white-space:nowrap;padding-bottom:6px;scrollbar-width:none}
+  .nav::-webkit-scrollbar{display:none}
+  .nav .btn{margin-left:auto}
+  .leader .mono{display:none}
+}
+@media (max-width:899px){
+  .hero-row,.problem .head,.ba,.how-grid,.plan-grid,.ls-in,.wall-in{grid-template-columns:minmax(0,1fr)}
+  .proof ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .proof li:nth-child(odd){border-left:0;padding-left:0}
+  .proof li:nth-child(n+3){border-top:1px solid var(--rule)}
+  .n1{grid-column:1/8}.n2{grid-column:5/13}.n3{grid-column:1/11}.n4{grid-column:5/13}.n5{grid-column:2/12}
+  .jump{display:inline-flex}
+}
+@media (max-width:759px){
+  .cs-grid{grid-template-columns:minmax(0,1fr);gap:26px}
+  .cs.tall,.cs.a,.cs.b,.cs.c,.cs.d,.cs.wide{grid-column:1;grid-row:auto}
+  .cs.tall .cs-img{flex:none;aspect-ratio:4/5}
+  .cs.wide .cs-img{aspect-ratio:3/2}
+  .person{grid-template-columns:minmax(0,1fr)}
+  .person.ian,.person.rich{--fw:100%}
+  .person .phframe{max-width:220px;aspect-ratio:1/1}
+}
+@media (max-width:719px){
+  :root{--gut:16px}
+  body{font-size:18px;padding-bottom:calc(86px + env(safe-area-inset-bottom,0px))}
+  .leader{display:none}
+  .nav .btn{display:none}
+  .wm-name{font-size:28px}
+  .hero h1{font-size:clamp(44px,12.6vw,60px)}
+  .btns{flex-direction:column}
+  .btns .btn{width:100%}
+  .trust{margin-top:14px}
+  .film-in{min-width:1300px}
+  .proof ul{grid-template-columns:minmax(0,1fr)}
+  .proof li{border-left:0;padding-left:0;border-top:1px solid var(--rule);min-height:72px}
+  .proof li:first-child{border-top:0}
+  .wall figcaption b,.wall figcaption span{display:block}
+  .wall figcaption .sep{display:none}
+  .wall figcaption{font-size:17px}
+  .incl .v{font-size:24px}
+  .founding{margin-left:6px;margin-right:6px;padding:22px 20px 24px}
+  .notes{display:flex;flex-direction:column;gap:30px}
+  .note{width:92%}
+  .n1{align-self:flex-start}.n2{align-self:flex-end;margin-top:0;width:96%}.n3{align-self:flex-start;width:98%}.n4{align-self:flex-end;margin-top:0;width:90%}.n5{align-self:center;width:94%}
+  .faq details p{padding-right:0}
+  .ls .btn{width:100%;padding:0 8px;font-size:17px}
+  .jump{display:flex;width:100%}
+  .cta-in{flex-direction:column;align-items:flex-start}
+  .cta-act{width:100%}
+  .cta-act .btn{width:100%}
+  .foot .wrap{flex-direction:column;align-items:flex-start;gap:4px}
+  .foot .sep{display:none}
+  .bar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:900;background:var(--paper);border-top:1px solid var(--ink);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+  .bar .btn{min-height:52px}
+  .bar .btn:first-child{flex:1 1 auto}
+  .bar .btn:last-child{flex:0 0 96px;padding:0}
+  .sheet-meta span:last-child{display:none}
+}
+</style>
 </head>
-<body><h1>The Headshot Plan — coming soon</h1></body>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- shared SVG defs: sprocket pattern + avatar silhouette -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="spk" width="34" height="16" patternUnits="userSpaceOnUse">
+      <rect x="9" y="3" width="16" height="10" rx="2.6" style="fill:var(--paper)"/>
+    </pattern>
+    <symbol id="person" viewBox="0 0 100 110">
+      <circle cx="50" cy="38" r="19"/>
+      <path d="M10 110c0-34 15-52 40-52s40 18 40 52z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="leader">
+  <div class="wrap">
+    <span class="mono">Roll 01 &middot; Denver</span>
+    <a class="tel" href="tel:+10000000000">Call <span class="ph">[PLACEHOLDER: Denver phone]</span></a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wm" href="#top" aria-label="The Headshot Plan, back to top">
+      <svg class="wm-mark" viewBox="0 0 38 38" aria-hidden="true"><path d="M4 13V4h9M25 4h9v9M34 25v9h-9M13 34H4v-9" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="square"/><circle cx="19" cy="19" r="5" fill="currentColor"/></svg>
+      <span><span class="wm-name">The Headshot Plan</span><span class="wm-sub">by Ian Borgerhoff &middot; Denver</span></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#how">How it works</a>
+      <a href="#price">The plan</a>
+      <a href="#work">Our work</a>
+      <a href="#photographers">Photographers</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn sm" href="#price">Get my team&rsquo;s price</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="wrap">
+    <p class="pre">For marketing directors at Denver firms with 50&ndash;300 people</p>
+    <h1 id="hero-h" class="cond">Stop finding a photographer every time you hire someone.</h1>
+    <div class="hero-row">
+      <p class="sub">We photograph your whole team for $0 down. Then we keep every headshot current: every new hire, every quarter, at your office. $10 a person, a month.</p>
+      <div>
+        <div class="btns">
+          <a class="btn" href="#price">Get my team&rsquo;s price</a>
+          <a class="btn ghost" href="#how">See how it works</a>
+        </div>
+        <ul class="trust">
+          <li><span>2,000 weddings of experience between Ian and Rich</span></li>
+          <li><span>Award-winning: ILEA Best Corporate Photographer <span class="ph nw">[CONFIRM: years]</span></span></li>
+          <li><span>53 client reviews, 4.9+ average</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="strip-line">Every new hire looks like they&rsquo;ve always been here.</p>
+  </div>
+
+  <div class="film" id="strip" tabindex="0" role="region" aria-label="Contact strip of five headshots. On small screens, scroll sideways.">
+    <div class="film-in">
+      <svg class="spr" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#spk)"/></svg>
+      <ol class="frames">
+        <li class="fr">
+          <div class="img"><img src="img/p1.jpg" width="1200" height="800" alt="Man in a dark shirt with a serious expression, white background" style="object-position:60% 40%"></div>
+          <span class="num">14</span>
+        </li>
+        <li class="fr" id="pick">
+          <div class="img">
+            <img src="img/p6.jpg" width="1200" height="800" alt="Young woman with a warm smile, white background">
+            <svg class="circle" viewBox="0 0 300 203.5" aria-hidden="true" focusable="false"><path pathLength="1" d="M34 15 C80 6 170 3 240 8 C277 11 296 30 294 78 C293 125 292 168 270 187 C245 203 150 200 70 199 C28 198 6 180 5 125 C4 80 6 36 38 14 C70 2 110 2 142 4"/></svg>
+          </div>
+          <span class="num">14A</span>
+          <span class="pick" aria-hidden="true">picked <svg class="check" viewBox="0 0 48 44"><path d="M5 24 C10 27 14 33 18 39 C24 26 34 12 44 5"/></svg></span>
+        </li>
+        <li class="fr">
+          <div class="img"><img src="img/p4.jpg" width="1200" height="1800" alt="Woman in a yellow tweed jacket with arms crossed, white background" style="object-position:50% 14%"></div>
+          <span class="num">15</span>
+        </li>
+        <li class="fr">
+          <div class="img"><img src="img/p3.jpg" width="1200" height="800" alt="Man in a blue suit with arms crossed, photographed outdoors in a park" style="object-position:70% 30%"></div>
+          <span class="num">15A</span>
+        </li>
+        <li class="fr">
+          <div class="img"><img src="img/p2.jpg" width="1200" height="800" alt="Black and white portrait of a smiling man"></div>
+          <span class="num">16</span>
+        </li>
+      </ol>
+      <svg class="spr" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#spk)"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF STRIP -->
+<section class="proof" aria-label="Recognition">
+  <div class="wrap">
+    <ul>
+      <li><div><span class="award">2,000 weddings of experience</span></div></li>
+      <li><div><span class="award">ILEA Best Corporate &amp; Best Wedding Photographer</span> <span class="ph nw">[CONFIRM: years]</span></div></li>
+      <li><div><span class="award">Best of Zola 2025</span></div></li>
+      <li><div><span class="ph">[CONFIRM: client logos &mdash; Salesforce, JLL &mdash; only with written permission]</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem sec" aria-labelledby="problem-h">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="problem-h" class="cond">Your team page tells on you.</h2>
+      <ul class="pain">
+        <li>The proposal&rsquo;s due Thursday, and your project manager&rsquo;s headshot is cropped from a wedding photo.</li>
+        <li>New hires go months without a photo, or send one from their kitchen.</li>
+        <li>Five photographers. Five backgrounds. Three selfies.</li>
+        <li>Some of your leaders still use a headshot from 15 years ago.</li>
+      </ul>
+    </div>
+
+    <p class="key">Headshot day doesn&rsquo;t fix it. It looks great for a month. Then you hire someone, then someone else, and by spring the page is a mess again. <strong>The problem isn&rsquo;t the photographer. It&rsquo;s that headshot day happens once, and your team keeps changing.</strong></p>
+
+    <div class="ba">
+      <figure>
+        <div class="avs" role="img" aria-label="Illustration: six placeholder people on six mismatched backgrounds">
+          <div class="av" style="--bg:#D2C4A6;--fg:#8C7A58;--w:56%"><svg viewBox="0 0 100 110"><use href="#person"/></svg></div>
+          <div class="av" style="--bg:#92AA8C;--fg:#4F6B4A;--w:72%;--x:-7%"><svg viewBox="0 0 100 110"><use href="#person"/></svg></div>
+          <div class="av" style="--bg:#A9AAAC;--fg:#6C6E71;--w:48%;--x:9%"><svg viewBox="0 0 100 110"><use href="#person"/></svg></div>
+          <div class="av" style="--bg:#C5CFD9;--fg:#6E7C8C;--w:76%;--r:-13deg;--y:-12%;--x:3%"><svg viewBox="0 0 100 110"><use href="#person"/></svg></div>
+          <div class="av" style="--bg:#2A2A2C;--fg:#5A5A5E;--w:62%"><svg viewBox="0 0 100 110"><use href="#person"/></svg></div>
+          <div class="av" style="--bg:#D8B7A3;--fg:#8E5F4A;--w:64%;--x:11%;--y:-8%"><svg viewBox="0 0 100 110"><use href="#person"/></svg></div>
+        </div>
+        <figcaption class="cap">Before: six people, six looks (illustration)</figcaption>
+      </figure>
+      <figure>
+        <div class="mini-film">
+          <svg class="spr" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#spk)"/></svg>
+          <div class="mini-frames">
+            <div class="crop" role="img" aria-label="Man in a dark shirt, white background, cropped chest up" style="background-image:url(img/p1.jpg);background-size:187.5% auto;background-position:67.9% 0"></div>
+            <div class="crop" role="img" aria-label="Woman in a yellow tweed jacket, white background, same crop" style="background-image:url(img/p4.jpg);background-size:357.14% auto;background-position:52.8% 25.4%"></div>
+            <div class="crop" role="img" aria-label="Young woman smiling, white background, same crop" style="background-image:url(img/p6.jpg);background-size:357.14% auto;background-position:50% 55.5%"></div>
+          </div>
+          <svg class="spr" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#spk)"/></svg>
+        </div>
+        <figcaption class="cap">After: one look, every hire</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- MATCHING WALL -->
+<section class="wall dark" aria-labelledby="wall-h">
+  <svg class="spr" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#spk)"/></svg>
+  <div class="wrap wall-in">
+    <div class="wall-head">
+      <h2 id="wall-h" class="cond">Same light. Same crop. Months apart.</h2>
+      <p class="wall-note">(illustration of your Look File)</p>
+    </div>
+    <div class="wall-frames">
+      <figure>
+        <div class="tile"><img class="k1" src="img/p1.jpg" width="1200" height="800" alt="Hire number 1, photographed in January: a man on a white background"></div>
+        <span class="num">17</span>
+        <figcaption><b>Hire #1</b><span class="sep"> &middot; </span><span>January</span></figcaption>
+      </figure>
+      <figure>
+        <div class="tile"><img class="k4" src="img/p4.jpg" width="1200" height="1800" alt="Hire number 17, photographed in May: a woman in a yellow tweed jacket on a white background"></div>
+        <span class="num">17A</span>
+        <figcaption><b>Hire #17</b><span class="sep"> &middot; </span><span>May</span></figcaption>
+      </figure>
+      <figure>
+        <div class="tile"><img class="k6" src="img/p6.jpg" width="1200" height="800" alt="Hire number 41, photographed in November: a young woman smiling on a white background"></div>
+        <span class="num">18</span>
+        <figcaption><b>Hire #41</b><span class="sep"> &middot; </span><span>November</span></figcaption>
+      </figure>
+    </div>
+  </div>
+  <svg class="spr" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#spk)"/></svg>
+</section>
+
+<!-- HOW IT WORKS + LOOK FILE -->
+<section class="sec" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <h2 id="how-h" class="cond">How it works</h2>
+    <div class="how-grid">
+      <ol class="steps">
+        <li>
+          <h3>Tell us your headcount.</h3>
+          <p>You&rsquo;ll have your price within 1 business day. <span class="ph nw">[CONFIRM]</span></p>
+        </li>
+        <li>
+          <h3>We shoot your whole team in month one, $0 down.</h3>
+          <p>A studio in your conference room, 5&ndash;10 minutes a person, coached the whole way. We run the day: scheduling link, reminders, and a make-up slot for anyone on a job site. We save your lighting, background and crop in your Look File, so every future photo matches.</p>
+        </li>
+        <li>
+          <h3>Everyone approves their photo.
+            <svg class="check" viewBox="0 0 48 44" aria-hidden="true" focusable="false"><path d="M5 24 C10 27 14 33 18 39 C24 26 34 12 44 5"/></svg>
+          </h3>
+          <p>Proofs in 24 hours, finished photos in a week. Don&rsquo;t love it? We reshoot it free.</p>
+        </li>
+        <li>
+          <h3>Then it runs itself.</h3>
+          <p>New hires every quarter, at your office. Anyone whose photo turns two gets a fresh one. Two Big Shoots a year for your events or your office.</p>
+        </li>
+      </ol>
+
+      <div>
+        <aside class="lookfile" aria-label="Sample Look File">
+          <h3 class="lf-title">LOOK FILE &mdash; <span class="ph">[PLACEHOLDER: client company]</span></h3>
+          <dl>
+            <div><dt>Key light:</dt> <dd><span class="ph">[CONFIRM: Ian&rsquo;s setup]</span></dd></div>
+            <div><dt>Rim light:</dt> <dd><span class="ph">[CONFIRM: Ian&rsquo;s setup]</span></dd></div>
+            <div><dt>Background:</dt> <dd>white</dd></div>
+            <div><dt>Crop:</dt> <dd>chest up, eyes on the upper third</dd></div>
+            <div><dt>Retouch:</dt> <dd>natural &mdash; skin, stray hairs, no reshaping <span class="ph nw">[CONFIRM]</span></dd></div>
+          </dl>
+        </aside>
+        <p class="lf-cap">We save this for every client, so hire #41 matches hire #1.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE PLAN -->
+<section class="plan sec" id="price" aria-labelledby="plan-h">
+  <div class="wrap">
+    <h2 id="plan-h" class="cond">The Headshot Plan</h2>
+    <div class="plan-grid">
+      <div>
+        <p class="amount"><strong>$10</strong><span class="u">per person, per month</span><span class="ph nw">[CONFIRM: pricing]</span></p>
+        <p class="credits">Your whole team is included up front. $0 down.</p>
+        <p class="phoneplan">It works like a phone plan. The expensive part is $0 down, and one monthly price covers everything after.</p>
+
+        <div class="calc" id="calc">
+          <label for="emp">How many people on your team?</label>
+          <input id="emp" name="emp" type="number" inputmode="numeric" min="10" max="2000" step="1" value="150">
+          <div class="calc-out" aria-live="polite">
+            <div id="calc-res">
+              <span class="big">Your plan: <span id="out-month">$1,500</span> a month</span>
+              <span class="small"><strong id="out-year">$18,000</strong> a year for about <strong id="out-value">$27,500</strong> of photography</span>
+            </div>
+            <p class="hint" id="calc-hint" hidden>Enter a number from 10 to 2,000.</p>
+          </div>
+        </div>
+
+        <h3 class="sub-h">What&rsquo;s included</h3>
+        <p class="val-note">Values at regular prices, for a 150-person firm</p>
+        <ul class="incl">
+          <li><span><b>The Kickoff:</b> your whole team, photographed at your office in month one. <b>$0 down</b></span><span class="v">$18,750</span></li>
+          <li><span><b>New-Hire Days:</b> every quarter, at your office</span><span class="v">$5,750</span></li>
+          <li><span><b>Two Big Shoots a year:</b> holiday party, groundbreaking, ribbon cutting, or your office</span><span class="v">$3,000</span></li>
+          <li><span><b>Proposal Rush:</b> someone needs a headshot before a deadline? We&rsquo;re there within 5 business days <span class="ph nw">[CONFIRM]</span></span><span class="v inc">included</span></li>
+          <li><span><b>Done-for-you headshot day:</b> scheduling link, reminders, make-up slots</span><span class="v inc">included</span></li>
+          <li><span><b>Ready-to-use files:</b> every headshot cropped for your website, LinkedIn, proposal resumes and Teams</span><span class="v inc">included</span></li>
+          <li><span><b>Always current:</b> nobody&rsquo;s headshot gets older than two years</span><span class="v inc">included</span></li>
+          <li><span>Your <b>Look File</b>, so hire #41 matches hire&nbsp;#1</span><span class="v inc">included</span></li>
+        </ul>
+
+        <div class="total">
+          <p class="t1"><strong>$27,500</strong> of photography a year</p>
+          <p class="t2">Your price: <strong>$18,000 a year</strong> ($1,500 a month)</p>
+        </div>
+
+        <ul class="guars">
+          <li>
+            <span class="mk"><svg class="check" viewBox="0 0 48 44" aria-hidden="true" focusable="false"><path d="M5 24 C10 27 14 33 18 39 C24 26 34 12 44 5"/></svg></span>
+            <p><strong>Love-your-photo guarantee:</strong> every person approves their photo, or we reshoot it free.</p>
+          </li>
+          <li>
+            <span class="mk sq" aria-hidden="true"></span>
+            <p><strong>Nobody left behind:</strong> anyone who misses headshot day gets a make-up slot, free.</p>
+          </li>
+          <li>
+            <span class="mk sq" aria-hidden="true"></span>
+            <p><span class="ph">[CONFIRM: bold guarantee &mdash; first month free if your team page doesn&rsquo;t look like one company after the first shoot]</span></p>
+          </li>
+        </ul>
+
+        <p class="terms">12 months, then month to month. Minimum $500 a month. <span class="ph nw">[CONFIRM]</span></p>
+
+        <div class="founding">
+          <svg class="rough" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M7 2.2 C30 .6 70 1.4 96.5 1.8 C98.6 22 98.2 72 97.6 97.6 C70 99.2 28 98.6 2.6 98.2 C1.4 72 1.8 28 2.4 1.6 C4 .8 7 .5 11 .7"/></svg>
+          <h3>10 founding firms in Denver.</h3>
+          <p>Rich shoots two days a week, so we&rsquo;re opening Denver with 10 firms. Founders get their first month free and their price locked for life. In return, you let us show your logo and share a two-line review after your first shoot. <span class="ph nw">[CONFIRM]</span></p>
+        </div>
+
+        <div class="rates">
+          <h3>Not ready for a plan? <span class="ph nw">[CONFIRM: rate card]</span></h3>
+          <table>
+            <caption style="position:absolute;left:-999px">Single-shoot rate card</caption>
+            <tbody>
+              <tr><th scope="row">Headshots</th><td>$125 a person</td></tr>
+              <tr><th scope="row">New-hire visit</th><td>$500 + $125 a person</td></tr>
+              <tr><th scope="row">Big Shoot <span style="font-weight:400">(an event up to 4 hours, or your office)</span></th><td>$1,500</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <a class="btn jump" href="#quote">Get my team&rsquo;s price</a>
+      </div>
+
+      <div class="formcol">
+        <div class="formcard" id="quote">
+          <div class="film-top"><svg class="spr" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#spk)"/></svg></div>
+          <div class="form-in">
+            <h3>Get my team&rsquo;s price</h3>
+            <p class="lead">You&rsquo;ll have your price within 1 business day. <span class="ph nw">[CONFIRM]</span></p>
+            <form id="quote-form">
+              <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+              <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+              <div class="field"><label for="f-co">Firm</label><input id="f-co" name="firm" type="text" autocomplete="organization" required></div>
+              <div class="field"><label for="f-n">Number of employees</label><input id="f-n" name="employees" type="number" inputmode="numeric" min="1" required></div>
+              <div class="field"><label for="f-note">Anything we should know? <small>(optional)</small></label><textarea id="f-note" name="note"></textarea></div>
+              <label class="optin" for="f-ls"><input id="f-ls" name="leadership_session" type="checkbox" value="yes"><span>Start with the free Leadership Session</span></label>
+              <button class="btn" type="submit">Get my team&rsquo;s price</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FREE LEADERSHIP SESSION -->
+<section class="ls-band" aria-labelledby="ls-h">
+  <div class="wrap">
+    <div class="ls">
+      <div class="film-top"><svg class="spr" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#spk)"/></svg></div>
+      <div class="ls-in">
+        <div>
+          <p class="kick">Easy first step</p>
+          <h2 id="ls-h" class="cond">Not ready to decide? Start with a free Leadership Session.</h2>
+        </div>
+        <div>
+          <p>Rich photographs two of your leaders at your office in about 30 minutes. You keep the photos either way. If you love them, we&rsquo;ll talk about the plan. <span class="ph nw">[CONFIRM]</span></p>
+          <a class="btn" id="ls-btn" href="#price">Book my free Leadership Session</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR WORK -->
+<section class="work sec" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <h2 id="work-h" class="cond">Our work</h2>
+    <div class="sheet">
+      <div class="sheet-meta"><span>The Headshot Plan &middot; contact sheet</span><span>Denver</span></div>
+      <div class="cs-grid">
+        <figure class="cs a">
+          <div class="cs-img"><img src="img/p1.jpg" width="1200" height="800" alt="Man in a dark shirt, white background" style="object-position:60% 40%"></div>
+          <figcaption><span class="n">19</span><span>White background</span></figcaption>
+        </figure>
+        <figure class="cs tall">
+          <div class="cs-img"><img src="img/p4.jpg" width="1200" height="1800" alt="Executive portrait: woman in a yellow tweed jacket, arms crossed, white background" style="object-position:50% 30%"></div>
+          <figcaption><span class="n">19A</span><span>Executive</span></figcaption>
+        </figure>
+        <figure class="cs c">
+          <div class="cs-img"><img src="img/p3.jpg" width="1200" height="800" alt="Man in a blue suit with arms crossed, outdoors in a park" style="object-position:70% 30%"></div>
+          <figcaption><span class="n">20</span><span>On location</span></figcaption>
+        </figure>
+        <figure class="cs b">
+          <div class="cs-img"><img src="img/p2.jpg" width="1200" height="800" alt="Black and white portrait of a smiling man"></div>
+          <figcaption><span class="n">20A</span><span>Black &amp; white</span></figcaption>
+        </figure>
+        <figure class="cs d">
+          <div class="cs-img"><img src="img/p6.jpg" width="1200" height="800" alt="Young woman with a warm smile, white background"></div>
+          <figcaption><span class="n">21</span><span>Natural and warm</span></figcaption>
+        </figure>
+        <figure class="cs wide">
+          <div class="cs-img"><img src="img/p5.jpg" width="1200" height="798" alt="Behind the scenes: a photographer shooting a woman between two large softboxes in an office studio set-up, colleagues watching"></div>
+          <figcaption><span class="n">21A<svg viewBox="0 0 60 30" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M4 5 C16 2 38 3 56 4 C58 11 57 20 55 27 C38 29 18 28 5 26 C3 19 4 11 6 3"/></svg></span><span>We bring the studio to your office</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTOGRAPHERS -->
+<section class="sec" id="photographers" aria-labelledby="ph-h" style="border-top:1px solid var(--ink)">
+  <div class="wrap">
+    <h2 id="ph-h" class="cond">2,000 weddings of experience behind one camera</h2>
+    <p class="ph-intro">At a wedding, you get 30 seconds to make a nervous groom look like himself, in bad light, with his grandmother waiting. Seven minutes with an engineer is easy after that.</p>
+    <div class="people">
+      <article class="person ian">
+        <div class="phframe"><span class="ph">[PLACEHOLDER: photo of Ian]</span></div>
+        <div>
+          <h3>Ian Borgerhoff</h3>
+          <p class="rest">Picked up a camera at 10 and learned in a darkroom on black-and-white film. A Butler Athletics Hall of Fame swimmer, he went on to photograph about 700 weddings and won ILEA&rsquo;s Best Corporate Photographer and Best Wedding Photographer <span class="ph nw">[CONFIRM: years]</span>. He has photographed teams for companies like <span class="ph">[CONFIRM: Salesforce, JLL &mdash; with permission]</span>. He edits every photo himself.</p>
+        </div>
+      </article>
+      <article class="person rich">
+        <div class="phframe"><span class="ph">[PLACEHOLDER: photo of Rich]</span></div>
+        <div>
+          <h3>Rich <span class="ph nw">[CONFIRM: last name]</span></h3>
+          <p class="rest">Our Denver photographer. Rich was Ian&rsquo;s mentor when Ian started out. He spent years as a sports photographer for the Indianapolis Star and has shot about 1,300 weddings over 26 years. Ian edits every frame, so a photo taken in Denver matches one taken in Indianapolis.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews sec" aria-labelledby="rev-h">
+  <div class="wrap">
+    <h2 id="rev-h" class="cond">Even people who hate having their picture taken say this</h2>
+    <p class="intro">Real reviews from Ian&rsquo;s wedding clients.</p>
+    <div class="notes">
+      <figure class="note n1">
+        <blockquote><p class="q">&ldquo;He makes you feel very comfortable even when posing for a camera isn&rsquo;t your thing.&rdquo;</p></blockquote>
+        <figcaption class="src">&mdash; WeddingWire review, 2014</figcaption>
+      </figure>
+      <figure class="note n2">
+        <blockquote><p class="q">&ldquo;One of the many things our bridal parties loved about working with Ian was his educational session on how to best pose and smile for photos in the most flattering ways.&rdquo;</p></blockquote>
+        <figcaption class="src">&mdash; Hayden &amp; D., Zola, 2024</figcaption>
+      </figure>
+      <figure class="note n3">
+        <blockquote><p class="q">&ldquo;As a venue manager responsible for event planning, sales, and marketing, it is really important to collect the best images to capture the essence of our venues and Ian is one of our main go to photographers to do this.&rdquo;</p></blockquote>
+        <figcaption class="src">&mdash; Amanda Van Der Moere, venue manager, Zola, 2024</figcaption>
+      </figure>
+      <figure class="note n4">
+        <blockquote><p class="q">&ldquo;Ian and Rich were just amazing!&rdquo;</p></blockquote>
+        <figcaption class="src">&mdash; Adie F., The Knot, 2026</figcaption>
+      </figure>
+      <div class="note n5"><span class="ph">[PLACEHOLDER: 2&ndash;3 reviews from corporate headshot clients]</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq sec" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <h2 id="faq-h" class="cond">Common questions</h2>
+    <div class="faq-list">
+      <details>
+        <summary>&ldquo;We only need headshots every few years.&rdquo;</summary>
+        <p>You hire every month. Headshot day is out of date by spring. The plan keeps your page current without planning another headshot day.</p>
+      </details>
+      <details>
+        <summary>&ldquo;Another monthly bill?&rdquo;</summary>
+        <p>It replaces the headshot day, the new-hire scramble and the event photographer, on one invoice. A 150-person firm pays $1,500 a month for about $27,500 of photography a year.</p>
+      </details>
+      <details>
+        <summary>&ldquo;What if we don&rsquo;t hire anyone this quarter?&rdquo;</summary>
+        <p>Use a Big Shoot, or refresh anyone whose photo is getting old. Nothing goes to waste.</p>
+      </details>
+      <details>
+        <summary>&ldquo;People won&rsquo;t show up.&rdquo;</summary>
+        <p>We run the day: a scheduling link, reminders, and a free make-up slot for anyone on a job site.</p>
+      </details>
+      <details>
+        <summary>&ldquo;Why not AI headshots?&rdquo;</summary>
+        <p>AI makes a picture of someone who looks like you. We make a picture of you: real light, real expression, coached in person. Your clients meet the real person. And people can tell: on LinkedIn, an AI headshot can make you look like a spam account.</p>
+      </details>
+      <details>
+        <summary>&ldquo;We already have a project photographer.&rdquo;</summary>
+        <p>Keep them for award shots of your buildings. Use your Big Shoots for events and your office.</p>
+      </details>
+      <details>
+        <summary>&ldquo;Where do you shoot?&rdquo;</summary>
+        <p>Denver metro. <span class="ph nw">[CONFIRM: other cities]</span></p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta dark" aria-labelledby="cta-h">
+  <svg class="spr" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#spk)"/></svg>
+  <div class="wrap cta-in">
+    <h2 id="cta-h" class="cond">Give every hire a headshot that looks like it belongs.</h2>
+    <div class="cta-act">
+      <a class="btn inv" href="#price">Get my team&rsquo;s price</a>
+      <a class="tel" href="tel:+10000000000">Or call <span class="ph">[PLACEHOLDER: Denver phone]</span></a>
+    </div>
+  </div>
+  <svg class="spr" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#spk)"/></svg>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>The Headshot Plan</span><span class="sep">&middot;</span>
+    <span>by Ian Borgerhoff</span><span class="sep">&middot;</span>
+    <span>Denver</span><span class="sep">&middot;</span>
+    <a class="tel" href="tel:+10000000000" style="min-height:44px"><span class="ph">[PLACEHOLDER: Denver phone]</span></a><span class="sep">&middot;</span>
+    <span class="ph nw">[CONFIRM: one branded email]</span><span class="sep">&middot;</span>
+    <span>&copy; 2026</span>
+  </div>
+</footer>
+
+<div class="bar" role="region" aria-label="Quick actions">
+  <a class="btn" href="#price">Get my team&rsquo;s price</a>
+  <a class="btn ghost" href="tel:+10000000000">Call</a>
+</div>
+
+<script>
+(function(){
+  // Quote form: swap for thank-you (nothing is sent from this page)
+  var form=document.getElementById('quote-form');
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var t=document.createElement('div');
+      t.className='thanks';
+      t.setAttribute('role','status');
+      t.setAttribute('tabindex','-1');
+      t.innerHTML='<p>Thanks. Ian will reply within 1 business day. <span class="ph nw">[CONFIRM]</span></p>';
+      form.replaceWith(t);
+      t.focus();
+    });
+  }
+
+  // Leadership Session button: carry the choice into the form's optional checkbox
+  var lsBtn=document.getElementById('ls-btn');
+  if(lsBtn){
+    lsBtn.addEventListener('click',function(){
+      var box=document.getElementById('f-ls');
+      if(box){box.checked=true;}
+    });
+  }
+
+  // Calculator: plan = max($500, people x $10); photography value = whole team + ~20% new hires + $2,000 + $3,000
+  var emp=document.getElementById('emp');
+  if(emp){
+    var res=document.getElementById('calc-res'),hint=document.getElementById('calc-hint');
+    var oM=document.getElementById('out-month'),oY=document.getElementById('out-year'),oV=document.getElementById('out-value');
+    var money=function(n){return '$'+String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,',');};
+    var run=function(){
+      var raw=emp.value,n=Math.round(Number(raw));
+      if(raw===''||!isFinite(n)||n<10||n>2000){res.hidden=true;hint.hidden=false;return;}
+      var month=Math.max(500,n*10);
+      var value=n*125+Math.round(n*0.2)*125+2000+3000;
+      oM.textContent=money(month);
+      oY.textContent=money(month*12);
+      oV.textContent=money(value);
+      res.hidden=false;hint.hidden=true;
+    };
+    emp.addEventListener('input',run);
+    emp.addEventListener('change',run);
+    run();
+  }
+
+  // On narrow screens, start the film strip with the picked frame in view
+  var strip=document.getElementById('strip'),pick=document.getElementById('pick');
+  if(strip&&pick&&strip.scrollWidth>strip.clientWidth){
+    var left=pick.getBoundingClientRect().left-strip.getBoundingClientRect().left+strip.scrollLeft;
+    strip.scrollLeft=Math.max(0,left-(strip.clientWidth-pick.offsetWidth)/2);
+  }
+})();
+</script>
+</body>
 </html>
